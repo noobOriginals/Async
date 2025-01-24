@@ -7,6 +7,10 @@ public class Executions {
     }
     @FunctionalInterface
     public interface ThreadExecution {
-        public int run(int threadNumber);
+        public void run(int threadNumber);
+    }
+    @FunctionalInterface
+    public interface AsyncExecution {
+        public void run(Async async, int threadNumber);
     }
 }
